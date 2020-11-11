@@ -16,4 +16,4 @@ function teste(){
 }
 
 teste()
-console.log(local)
+// console.log(local) // Não funciona.
