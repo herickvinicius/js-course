@@ -5,3 +5,5 @@ global.minhaApp = Object.freeze({
     },
     nome: 'Sistema Legal'
 })
+
+//Se tirar o Object.freeze(), os valores de minhaApp poderão ser alterados por outros arquivos.

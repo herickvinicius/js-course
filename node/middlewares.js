@@ -11,7 +11,7 @@ const passo2 = (ctx, next) => {
 
 const passo3 = ctx => ctx.valor3 = 'mid3'
 
-const exec = (ctx, ...middlewares) => {
+const exec = (ctx, ...middlewares) => {     //...middlewares é um operador rest
     const execPasso = indice => {
         middlewares && indice < middlewares.length &&
             middlewares[indice](ctx, () => execPasso(indice + 1))

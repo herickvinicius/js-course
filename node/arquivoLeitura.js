@@ -2,7 +2,7 @@ const fs = require('fs')
 
 const caminho = __dirname + '/arquivo.json'
 
-// sincrono...
+// sincrono (não recomendado)...
 const conteudo = fs.readFileSync(caminho, 'utf-8')
 console.log(conteudo)
 
@@ -13,7 +13,7 @@ fs.readFile(caminho, 'utf-8', (err, conteudo) => {
 })
 
 // como nosso arquivo a ser lido é um JSON, podemos simplificar fazendo:
-const config = require('./arquivo.json')
+const config = require('./arquivo.json') //require transforma arquivo JSON em objeto.
 console.log(config.db) // repare que esse log é executado antes do log assíncrono.
 
 // ler conteúdo de um diretório:
